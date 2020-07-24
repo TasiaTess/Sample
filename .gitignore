@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/StatisticsTestApp/.vs/StatisticsTestApp/v16
+/StatisticsTestApp/StatisticsTestApp/bin/Debug/netcoreapp3.1
+/StatisticsTestApp/StatisticsTestApp/obj
+/StatisticsTestApp/.vs/StatisticsTestApp/DesignTimeBuild
+/StatisticsTestApp/.vs/StatisticsTestApp/config
