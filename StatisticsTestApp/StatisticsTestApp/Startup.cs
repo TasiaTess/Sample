@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StatisticsTestApp.ModelBinder;
 using StatisticsTestApp.Repositories;
 
 namespace StatisticsTestApp
@@ -23,7 +24,9 @@ namespace StatisticsTestApp
         {
             services.AddTransient<IDbConnection>(db => new SqlConnection(Configuration.GetSection("DBSettings:ConnectionString")?.Value));
             services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddControllers();
+            services.AddControllers()
+                .AddMvcOptions(
+                    options => options.ModelBinderProviders.Insert(0, new StatisticModelBinderProvider()));
 
         }
 

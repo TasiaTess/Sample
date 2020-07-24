@@ -4,7 +4,7 @@ using StatisticsTestApp.Models;
 
 namespace StatisticsTestApp.ModelBinder
 {
-    public class StatisticsModelBinder : IModelBinder
+    public class StatisticModelBinder : IModelBinder
     {
         public async Task BindModelAsync(ModelBindingContext bindingContext)
         {

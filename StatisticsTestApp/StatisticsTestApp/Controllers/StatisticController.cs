@@ -18,7 +18,7 @@ namespace StatisticsTestApp.Controllers
             _productRepository = productRepository;
         }
                 
-        [HttpGet("{stats?}")]
+        [HttpGet]
         public IActionResult GetStatistics(Stats stats)
         {
             if (stats?.MinimumCountInStock == null && stats?.Owner == null)
